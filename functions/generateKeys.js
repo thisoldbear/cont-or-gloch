@@ -10,7 +10,7 @@ const twitterKeys = {
 };
 
 // Generate new Twitter keys
-["src", "lib"].map(path => {
+["src", "lib"].map((path) => {
   fs.writeFile(
     `${path}/twitterKeys.json`,
     JSON.stringify(twitterKeys),
@@ -21,6 +21,6 @@ const twitterKeys = {
 });
 
 // Copy the serviceAccount file to lib to be bundled
-fs.copyFile('src/serviceAccount.json', 'lib/serviceAccount.json', (err) => {
+fs.copyFile("src/serviceAccount.json", "lib/serviceAccount.json", (err) => {
   if (err) throw err;
 });
